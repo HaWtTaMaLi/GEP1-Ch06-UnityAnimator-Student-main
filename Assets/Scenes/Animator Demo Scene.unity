@@ -3188,7 +3188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897182559}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3280,7 +3280,19 @@ MonoBehaviour:
     m_ActionId: 586e1a7e-6f7e-4e41-b36e-4c92382ab37b
     m_ActionName: 'Player/Spacebar[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897182566}
+        m_TargetAssemblyTypeName: MegaManAnimController, Assembly-CSharp
+        m_MethodName: OnMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8556e366-5dd0-4a27-915a-65bc067cee47
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -3322,6 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13b95076c6415b45b7cbb690e66b406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  megaManAnimController: {fileID: 1897182565}
 --- !u!1 &1987072048
 GameObject:
   m_ObjectHideFlags: 0
