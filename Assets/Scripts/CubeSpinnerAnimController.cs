@@ -5,7 +5,7 @@ public class CubeSpinnerAnimController : MonoBehaviour
 {
     public Animator cubeAnimController;
 
-    private int isRotatingHash = Animator.StringToHash("isRotating");
+    //private int isRotatingHash = Animator.StringToHash("isRotating");
 
     public void Start()
     {
@@ -16,16 +16,16 @@ public class CubeSpinnerAnimController : MonoBehaviour
     {
         Debug.Log("Toggled Spin");
 
-        if(context.performed && cubeAnimController.GetBool(isRotatingHash) == true)
+        if(context.performed && cubeAnimController.GetBool("isRotating") == false)
         {
             // animator = spin cube
-            cubeAnimController.SetBool(isRotatingHash, false);
+            cubeAnimController.SetBool("isRotating", true);
         }
 
-        else if (context.performed && cubeAnimController.GetBool(isRotatingHash) == false)
+        else if (context.performed && cubeAnimController.GetBool("isRotating") == true)
         {
             // animator = stop spinning cube
-            cubeAnimController.SetBool(isRotatingHash, true);
+            cubeAnimController.SetBool("isRotating", false);
         }
     }
 }
